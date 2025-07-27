@@ -25,7 +25,6 @@ function Login({ text }) {
       credentials: "include",
     });
     const data = await response.json();
-    console.log("Sessão:", data);
   };
 
   const handleLogin = async (e) => {
