@@ -28,7 +28,7 @@ function History() {
 
       setLoading(true);
       const res = await fetch(
-        `http://localhost:5000/api/auth/history/${userId}`,
+        `https://floatzenback.onrender.com/api/auth/history/${userId}`,
         {
           method: "GET",
           headers: {

@@ -89,7 +89,7 @@ function BuscaEspecifica() {
       body: JSON.stringify(history),
     };
 
-    const link = "http://localhost:5000/api/auth/history";
+    const link = "https://floatzenback.onrender.com/api/auth/history";
     const res = await fetch(link, options);
     const data = await res.json();
     console.log(data);
@@ -106,7 +106,7 @@ function BuscaEspecifica() {
       body: JSON.stringify({ option }),
     };
 
-    const link = "http://localhost:5000/api/auth/music1";
+    const link = "https://floatzenback.onrender.com/api/auth/music1";
 
     const res = await fetch(link, options);
     const track = await res.json();

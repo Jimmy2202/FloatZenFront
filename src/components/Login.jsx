@@ -21,7 +21,7 @@ function Login({ text }) {
   }, [location]);
 
   const checkSession = async () => {
-    const response = await fetch("http://localhost:5000/api/auth/session", {
+    const response = await fetch("https://floatzenback.onrender.com/api/auth/session", {
       credentials: "include",
     });
     const data = await response.json();
@@ -34,7 +34,7 @@ function Login({ text }) {
     }
 
     const opt = text === "Entrar" ? "login" : "register";
-    const link = `http://localhost:5000/api/auth/${opt}`;
+    const link = `https://floatzenback.onrender.com/api/auth/${opt}`;
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

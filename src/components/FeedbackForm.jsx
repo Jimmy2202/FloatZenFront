@@ -37,7 +37,7 @@ function FeedbackForm({ songName, artistName, userId, selected_option }) {
       type_selected: selected_option,
     };
 
-    await fetch("http://localhost:5000/api/auth/feedback", {
+    await fetch("https://floatzenback.onrender.com/api/auth/feedback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(feedback),
