@@ -9,6 +9,7 @@ function History() {
   const id = userData.id;
 
   const dateFormated = (str) => {
+    console.log(str);
     const [datePart, timePart] = str.split(" ");
     const [year, month, day] = datePart.split("-");
     const [hour, minute, second] = timePart.split(":");
