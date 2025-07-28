@@ -17,7 +17,7 @@ function BuscaPersonalizada() {
 
     setLoaded(false);
     setLoading(true);
-    const link = "/api/auth/ia/fetchprompt";
+    const link = "https://floatzenback.onrender.com/api/auth/ia/fetchprompt";
 
     const options = {
       method: "POST",
