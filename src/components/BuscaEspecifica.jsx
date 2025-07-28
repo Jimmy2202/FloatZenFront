@@ -15,7 +15,7 @@ function BuscaEspecifica() {
   const [isLoading, setIsLoading] = useState(false);
   const [searched, setSearched] = useState(false);
   const [selected, setSelected] = useState("");
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(true);
   const [isHoveringText, setIsHoveringText] = useState(false);
   const [feedback, setFeedback] = useState(false);
   const userData = JSON.parse(localStorage.getItem("user"));
