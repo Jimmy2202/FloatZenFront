@@ -8,18 +8,20 @@ function History() {
   const [loading, setLoading] = useState(false);
   const id = userData.id;
 
-  const dateFormated = (dateString) => {
-    const data = new Date(dateString);
+  const dateFormated = (isoString) => {
+    const data = new Date(isoString);
 
-    return data.toLocaleString("pt-BR", {
-      timeZone: "America/Sao_Paulo",
-      hour12: false,
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
+    // Soma 3 horas manualmente
+    data.setHours(data.getHours() + 3);
+
+    const dia = String(data.getDate()).padStart(2, "0");
+    const mes = String(data.getMonth() + 1).padStart(2, "0");
+    const ano = data.getFullYear();
+
+    const hora = String(data.getHours()).padStart(2, "0");
+    const minuto = String(data.getMinutes()).padStart(2, "0");
+
+    return `${dia}/${mes}/${ano}, ${hora}:${minuto}`;
   };
 
   useEffect(() => {
