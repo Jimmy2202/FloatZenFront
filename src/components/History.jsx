@@ -8,20 +8,8 @@ function History() {
   const [loading, setLoading] = useState(false);
   const id = userData.id;
 
-  const dateFormated = (str) => {
-    console.log(str);
-    const [datePart, timePart] = str.split(" ");
-    const [year, month, day] = datePart.split("-");
-    const [hour, minute, second] = timePart.split(":");
-
-    const data = new Date(
-      Number(year),
-      Number(month) - 1, // mês começa em 0
-      Number(day),
-      Number(hour),
-      Number(minute),
-      Number(second)
-    );
+  const dateFormated = (dateString) => {
+    const data = new Date(dateString);
 
     return data.toLocaleString("pt-BR", {
       timeZone: "America/Sao_Paulo",
