@@ -7,19 +7,30 @@ function History() {
   const [array, setArray] = useState([]);
   const [loading, setLoading] = useState(false);
   const id = userData.id;
-  
-  const dateFormated = (date) => {
-    const data = new Date(date);
-    const formatada = data.toLocaleString("pt-BR", {
+
+  const dateFormated = (str) => {
+    const [datePart, timePart] = str.split(" ");
+    const [year, month, day] = datePart.split("-");
+    const [hour, minute, second] = timePart.split(":");
+
+    const data = new Date(
+      Number(year),
+      Number(month) - 1, // mês começa em 0
+      Number(day),
+      Number(hour),
+      Number(minute),
+      Number(second)
+    );
+
+    return data.toLocaleString("pt-BR", {
+      timeZone: "America/Sao_Paulo",
+      hour12: false,
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
       hour: "2-digit",
       minute: "2-digit",
-      timeZone: "America/Sao_Paulo",
     });
-
-    return formatada;
   };
 
   useEffect(() => {
