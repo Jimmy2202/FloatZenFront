@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Login({ text }) {
@@ -21,9 +22,12 @@ function Login({ text }) {
   }, [location]);
 
   const checkSession = async () => {
-    const response = await fetch("https://floatzenback.onrender.com/api/auth/session", {
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://floatzenback.onrender.com/api/auth/session",
+      {
+        credentials: "include",
+      }
+    );
     const data = await response.json();
   };
 
@@ -32,6 +36,9 @@ function Login({ text }) {
       e.preventDefault();
     }
 
+    setMsglogin(
+      <AiOutlineLoading3Quarters className="text-white animate-spin" />
+    );
     const opt = text === "Entrar" ? "login" : "register";
     const link = `https://floatzenback.onrender.com/api/auth/${opt}`;
     const options = {
