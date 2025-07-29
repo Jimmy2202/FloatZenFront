@@ -131,6 +131,15 @@ function Login({ text }) {
 
       {msgLogin && <p className="text-white text-[15px]">{msgLogin}</p>}
       {error && <p className="text-red-400">{error}</p>}
+
+      {text === "Entrar" && (
+        <button
+          onClick={() => navigate("/register")}
+          className="text-sm mt-4 text-white underline hover:text-purple-200 transition"
+        >
+          Cadastre-se
+        </button>
+      )}
     </div>
   );
 }
