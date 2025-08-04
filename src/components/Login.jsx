@@ -110,7 +110,7 @@ function Login({ text }) {
         <input
           className="w-[90%] p-2 rounded-md font-medium hover:bg-purple-950 hover:text-white"
           type="password"
-          placeholder="Senha:"
+          placeholder={text != "Entrar" ? "Cadastrar senha:" : "Senha:"}
           onChange={(e) => setPassword(e.target.value)}
           required
         />

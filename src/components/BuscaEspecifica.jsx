@@ -293,18 +293,14 @@ function BuscaEspecifica() {
                 </motion.div>
               ))
             : ""}
-          {clicked ? (
-            <button
-              onMouseEnter={() => setStars(true)}
-              onMouseLeave={() => setStars(false)}
-              className="p-3 w-[90vw] text-[12px] flex justify-center items-center bottom-0 left-2 bg-black hover:bg-[url(https://i.imgur.com/PXbD2e4.gif)] hover:font-bold border-[2px] hover:scale-110 transition duration-500 ease-in-out m-auto rounded-3xl text-white"
-              onClick={() => setFeedback(true)}
-            >
-              Avaliar Recomendação
-            </button>
-          ) : (
-            ""
-          )}
+          <button
+            onMouseEnter={() => setStars(true)}
+            onMouseLeave={() => setStars(false)}
+            className="p-3 w-[90vw] text-[12px] flex justify-center items-center bottom-0 left-2 bg-black hover:bg-[url(https://i.imgur.com/PXbD2e4.gif)] hover:font-bold border-[2px] hover:scale-110 transition duration-500 ease-in-out m-auto rounded-3xl text-white"
+            onClick={() => setFeedback(true)}
+          >
+            Avaliar Recomendação
+          </button>
         </div>
       )}
     </div>
