@@ -76,6 +76,9 @@ function App() {
                   A Busca Personalizada visa recomendar cinco músicas de acordo
                   com especificações do usuário, logo, você tem liberdade de
                   especificar livremente com suas palavras que som quer ouvir.
+                  Esta recomendação não possui link para ouvir ou ver, é apenas
+                  a recomendação. A cada vez que você clicar na opção, músicas
+                  diferentes serão recomendadas.
                 </span>
 
                 <span className="text-white">
@@ -83,11 +86,17 @@ function App() {
                   de podcast de acordo com a opção selecionada pelo usuário. São
                   4 opções pré-determinadas: Foco, Ansiedade, Sono e Tristeza.
                   Para cada opção, o sistema recomendará sons que se encaixem
-                  neste estado de espírito.{" "}
+                  neste estado de espírito. Cada música tem a opção de ouvi-la
+                  no Spotify e no Youtube, e logo abaixo, uma breve explicação
+                  do motivo da recomendação.{" "}
+                </span>
+
+                <span className="text-white">
+                  O histórico salva as Recomendações Específicas.{" "}
                 </span>
 
                 <span className="text-red-600">
-                  A avaliação de cada recomendação é a parte mais importante. O
+                  A Avaliação de cada recomendação é a parte mais importante. O
                   sistema mede o impacto das recomendações no seu bem-estar,
                   logo, é importante avaliarcom as estrelas e dar o feedback
                   sobre COMO REALMENTE O SISTEMA TE AJUDOU NO SEU ESTADO
