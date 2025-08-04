@@ -60,7 +60,7 @@ function App() {
         element={
           info ? (
             <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
-              <div className="font-alumni w-[70vw] h-[70vh] sm-custom:h-[80vh] sm-custom:p-1 p-5 relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
+              <div className="font-alumni w-[70vw] h-[70vh] sm-custom:h-[90vh] sm-custom:p-2 p-5 relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
                 <button
                   onClick={() => setInfo(false)}
                   className="absolute right-2 top-2 text-pink-600"
@@ -98,7 +98,7 @@ function App() {
                 <span className="text-red-600">
                   A Avaliação de cada recomendação é a parte mais importante. O
                   sistema mede o impacto das recomendações no seu bem-estar,
-                  logo, é importante avaliarcom as estrelas e dar o feedback
+                  logo, é importante avaliar com as estrelas e dar o feedback
                   sobre COMO REALMENTE O SISTEMA TE AJUDOU NO SEU ESTADO
                   EMOCIONAL. Essa avaliação é o ouro para que este projeto
                   funcione como deveria.{" "}
