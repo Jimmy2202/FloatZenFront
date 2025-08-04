@@ -60,7 +60,7 @@ function App() {
         element={
           info ? (
             <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
-              <div className="font-alumni w-[70vw] h-fit p-5 relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
+              <div className="font-alumni w-[70vw] h-[70vh] sm-custom:p-1 p-5 relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
                 <button
                   onClick={() => setInfo(false)}
                   className="absolute right-2 top-2 text-pink-600"
