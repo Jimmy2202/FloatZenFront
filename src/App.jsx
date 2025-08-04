@@ -18,6 +18,7 @@ import ResetPassword from "./components/ResetPassword";
 
 function App() {
   const userData = JSON.parse(localStorage.getItem("user"));
+  const [info, setInfo] = useState(false);
 
   return (
     <Routes>
@@ -57,13 +58,59 @@ function App() {
       <Route
         path="/main"
         element={
-          <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
-            <Header />
-            <div className="w-[100%] flex flex-col justify-between gap-10 items-center">
-              <Option1 text="Busca Personalizada" />
-              <Option1 text="Busca Específica" />
+          info ? (
+            <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
+              <div className="w-[70%] relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
+                <button
+                  onClick={() => setInfo(false)}
+                  className="absolute right-2 top-2"
+                >
+                  Fechar
+                </button>
+                <span>
+                  FloatZen foi desenvolvido para medir o impacto da música e dos
+                  sons no bem-estar do usuário.
+                </span>
+
+                <span>
+                  A Busca Personalizada visa recomendar cinco músicas de acordo
+                  com especificações do usuário, logo, você tem liberdade de
+                  especificar livremente com suas palavras que som quer ouvir.
+                </span>
+
+                <span>
+                  A Busca Específica visa recomendar uma música e três episódios
+                  de podcast de acordo com a opção selecionada pelo usuário. São
+                  4 opções pré-determinadas: Foco, Ansiedade, Sono e Tristeza.
+                  Para cada opção, o sistema recomendará sons que se encaixem
+                  neste estado de espírito.{" "}
+                </span>
+
+                <span className="text-red-600">
+                  A avaliação de cada recomendação é a parte mais importante. O
+                  sistema mede o impacto das recomendações no seu bem-estar,
+                  logo, é importante avaliarcom as estrelas e dar o feedback
+                  sobre COMO REALMENTE O SISTEMA TE AJUDOU NO SEU ESTADO
+                  EMOCIONAL. Essa avaliação é o ouro para que este projeto
+                  funcione como deveria.{" "}
+                </span>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
+              <Header />
+              <div className="w-[100%] flex flex-col justify-between gap-10 items-center">
+                <Option1 text="Busca Personalizada" />
+                <Option1 text="Busca Específica" />
+                <button
+                  onClick={() => setInfo(true)}
+                  className="p-4 bg-black border border-pink-500 text-pink-600 hover:scale-105 hover:text-black hover:bg-pink-600 transition duration-500 ease-in-out"
+                >
+                  Como Usar (recomendado para primeiro uso)
+                </button>
+              </div>
+            </div>
+          )
         }
       />
 
