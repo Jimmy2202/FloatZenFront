@@ -78,7 +78,7 @@ function App() {
                   especificar livremente com suas palavras que som quer ouvir.
                 </span>
 
-                <span>
+                <span className="text-white">
                   A Busca Específica visa recomendar uma música e três episódios
                   de podcast de acordo com a opção selecionada pelo usuário. São
                   4 opções pré-determinadas: Foco, Ansiedade, Sono e Tristeza.
