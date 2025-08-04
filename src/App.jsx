@@ -60,19 +60,19 @@ function App() {
         element={
           info ? (
             <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
-              <div className="w-[70%] relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
+              <div className="w-[70%] h-[70%] p-5 relative overflow-y-auto flex flex-col justify-center gap-3 text-center backdrop-blur-md items-center">
                 <button
                   onClick={() => setInfo(false)}
-                  className="absolute right-2 top-2"
+                  className="absolute right-2 top-2 text-pink-600"
                 >
                   Fechar
                 </button>
-                <span>
+                <span className="text-white">
                   FloatZen foi desenvolvido para medir o impacto da música e dos
                   sons no bem-estar do usuário.
                 </span>
 
-                <span>
+                <span className="text-white">
                   A Busca Personalizada visa recomendar cinco músicas de acordo
                   com especificações do usuário, logo, você tem liberdade de
                   especificar livremente com suas palavras que som quer ouvir.
