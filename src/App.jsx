@@ -97,7 +97,7 @@ function App() {
               </div>
             </div>
           ) : (
-            <div className="w-[100vw] h-[100vh] flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
+            <div className="w-[100vw] h-[100vh] mt-4 flex justify-center items-center bg-[url(https://i.imgur.com/SYy4172.jpeg)] bg-bg-no-repeat">
               <Header />
               <div className="w-[100%] flex flex-col justify-between gap-10 items-center">
                 <Option1 text="Busca Personalizada" />
