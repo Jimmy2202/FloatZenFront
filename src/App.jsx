@@ -67,7 +67,7 @@ function App() {
                 >
                   Fechar
                 </button>
-                <span className="text-white">
+                <span className="text-white sm-custom:mt-8">
                   FloatZen foi desenvolvido para medir o impacto da música e dos
                   sons no bem-estar do usuário.
                 </span>
